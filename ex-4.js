@@ -373,5 +373,17 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+// Start coding here\
+function memberName(bills){
+  if (bills.member !== null)
+  return bills.member.name
+
+}
+
+
+
+
+let noNullMember = bills.filter(memberName)
+let numberMember = noNullMember.map(memberName)
+const totalMembers = numberMember.filter((name,index) => numberMember.indexOf(name) === index)
+console.log("Unique Members Count: "+totalMembers.length)

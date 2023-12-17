@@ -375,4 +375,18 @@ const bills = [
 
 // Start coding here
 
-const totalPaidByLocation;
+function addNameAndTotal(prev,cur){
+    if (prev[cur.location]){
+        prev[cur.location] += cur.total 
+       
+    }else{
+        prev[cur.location] = cur.total
+    }
+    return prev
+
+
+    
+}
+
+const totalPaidByLocation = bills.reduce(addNameAndTotal,{})
+console.log(totalPaidByLocation)
